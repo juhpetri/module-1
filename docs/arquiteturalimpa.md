@@ -32,8 +32,14 @@ Contém as entidades do domínio puro.
 Sem dependência de frameworks ou infraestrutura.
 
 **Exemplo:**
+
 ```java
+import java.util.UUID;
+
+@Entity
 public class Cliente {
+    @Id
+    private UUID id;
     private String nome;
     private String email;
     private boolean ativo;
@@ -106,14 +112,14 @@ Exemplo: ClienteRequest, ClienteResponse.
 Contém os mecanismos de persistência de dados e implementações concretas (como JPA, Mongo, ou em memória).
 
 **Exemplo:**
-```java
-@Repository
-public class ClienteRepositoryImpl {
-private List<Cliente> clientes = new ArrayList<>();
 
-    public void salvar(Cliente cliente) {
-        clientes.add(cliente);
-    }
+```java
+import java.util.UUID;
+
+@Repository
+public interface ClienteRepository extends JpaRepository<Cliente, UUID> {
+    Client findByEmail(String email);
+    Client findByNomeAndEmail(String nome);
 }
 ```
 

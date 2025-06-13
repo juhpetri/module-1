@@ -20,11 +20,11 @@ public class ArquiteturaLimpaExplicacao {
      * ──────────────────────────────
      * Camada central da aplicação, onde residem as regras de negócio mais puras.
      *
-     * Pacote: com.code.craft.mentor.dev.domain.model
+     * Pacote: com.code.craft.mentor.dev.domain.model/entity
      * Responsabilidade: Representar as entidades do domínio (ex: Cliente, Pedido).
      * - Não deve ter dependências com outras camadas
      *
-     * Pacote: com.code.craft.mentor.dev.domain.usecase
+     * Pacote: com.code.craft.mentor.dev.domain.usecase/interfaces
      * Responsabilidade: Interfaces (ports) que descrevem os casos de uso.
      * - Ex: interface ClienteService com método cadastrar(Cliente c)
      */
@@ -37,7 +37,7 @@ public class ArquiteturaLimpaExplicacao {
      *
      * Pacote: com.code.craft.mentor.dev.application.service
      * Responsabilidade: Implementar as interfaces da camada de domínio.
-     * - Ex: ClienteServiceImpl implementa ClienteService
+     * - Ex: ClienteServiceImpl implements ClienteService
      * - Contém a lógica de orquestração, validação e aplicação das regras
      */
 
@@ -64,7 +64,7 @@ public class ArquiteturaLimpaExplicacao {
      *
      * Pacote: com.code.craft.mentor.dev.infrastructure.repository
      * Responsabilidade: Implementar acesso a dados (JPA, Mongo, memória, etc.)
-     * - Ex: ClienteRepositoryImpl simula persistência
+     * - Ex: ClienteRepository, ProdutoRepository simula persistência
      *
      * Pacote: com.code.craft.mentor.dev.infrastructure.config
      * Responsabilidade: Beans e configurações específicas do Spring Boot
