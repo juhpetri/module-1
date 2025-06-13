@@ -2,7 +2,7 @@ package com.codecraftmentor.fundamentos;
 
 public class TiposDeVariaveis {
     public static void main(String[] args) {
-        int idade = 25;
+        int idade = 0;
         double altura = 1.75;
         boolean estudante = true;
         String nome = "João";

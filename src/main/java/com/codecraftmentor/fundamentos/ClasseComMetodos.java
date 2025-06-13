@@ -1,6 +1,6 @@
 package com.codecraftmentor.fundamentos;
 
-public class Pessoa {
+public class ClasseComMetodos {
     private String nome;
     private int idade;
 

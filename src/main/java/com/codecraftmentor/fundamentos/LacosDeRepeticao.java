@@ -3,12 +3,12 @@ package com.codecraftmentor.fundamentos;
 public class LacosDeRepeticao {
     public static void main(String[] args) {
         // Estrutura de repetição for
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Contando: " + i);
+        String[] frutas = {"Maçã", "Banana", "Laranja"};
+        for (int i = 0; i < frutas.length; i++) {
+            System.out.println("Contando: " + i + " - Fruta: " + frutas[i]);
         }
 
         // Estrutura de repetição for-each
-        String[] frutas = {"Maçã", "Banana", "Laranja"};
         for (String fruta : frutas) {
             System.out.println("Fruta: " + fruta);
         }

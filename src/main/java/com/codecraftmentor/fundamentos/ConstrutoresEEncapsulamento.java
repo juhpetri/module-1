@@ -1,17 +1,31 @@
 package com.codecraftmentor.fundamentos;
 
-public class Produto {
+public class ConstrutoresEEncapsulamento {
     private String nome;
     private double preco;
+    private boolean ativo;
 
-    public Produto(String nome, double preco) {
+    public ConstrutoresEEncapsulamento(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
+        this.ativo = true;
+    }
+
+    public ConstrutoresEEncapsulamento(String nome, double preco, boolean ativo) {
+        this.nome = nome;
+        this.preco = preco;
+        this.ativo = ativo;
     }
 
     public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
 
     public double getPreco() { return preco; }
-    public void setPreco(double preco) { this.preco = preco; }
+
+    public void alterarPreco(double preco) {
+        if (preco > 0) {
+            this.preco = preco;
+        } else {
+            throw new IllegalArgumentException("Preço deve ser positivo");
+        }
+    }
 }
