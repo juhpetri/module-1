@@ -11,4 +11,4 @@
 3. Crie uma classe `ServicoDeAviso` que receba um `Notificador` no construtor e tenha um método `enviarAviso()` que utilize o notificador para enviar uma mensagem.
 4. Crie uma classe principal (`main`) que instancie `EmailNotificador`, injete no `ServicoDeAviso` e chame o método `enviarAviso()`.
 
-> Objetivo: Demonstrar como a dependência (`Notificador`) pode ser injetada no serviço, permitindo a troca fácil de implementações e promovendo baixo acoplamento.
+> Objetivo: Ao executar a classe CodeCraftMentorDevApplication o main acione ServicoDeAviso, onde a mensagem que será enviada deve ser "Enviando e-mail: [mensagem]. Olá cliente [nome], seu Pedido [numero] no valor de R$ [valor] [está/nãoestá] pago."
